@@ -14,16 +14,15 @@ public class BookTrigger : MonoBehaviour
 
     public GameObject Door;
 
-
-
-    void Start()
+    void Update()
     {
-        Door = GetComponent<GameObject>();
+        CheckBooks();
     }
+
 
     void CheckBooks()
     {
-        if ((redBookCount == redMaxCount))
+        if ((redBookCount == redMaxCount) && (blueBookCount == blueMaxCount) && (greenBookCount == greenMaxCount))
         {
             Door.SetActive(false);
         }
@@ -33,26 +32,26 @@ public class BookTrigger : MonoBehaviour
     //Checks if the book type when it enters the trigger based on the tag
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "redBook")
+        if (other.CompareTag("redBook"))
         {
             Debug.Log("Red Book Added");
            //Destroy(other.gameObject);
             redBookCount += 1;
-            Debug.Log("Red Books:" + redBookCount);
+            Debug.Log("Red Books: " + redBookCount);
         }
-        if (other.gameObject.tag == "blueBook")
+        if (other.CompareTag("blueBook"))
         {
             Debug.Log("Blue Book Added");
            // Destroy(other.gameObject);
-            redBookCount += 1;
-            Debug.Log("Blue Books:" + blueMaxCount);
+            blueBookCount += 1;
+            Debug.Log("Blue Books: " + blueMaxCount);
         }
-        if (other.gameObject.tag == "greenBook")
+        if (other.CompareTag("greenBook"))
         {
             Debug.Log("Green Book Added");
             //Destroy(other.gameObject);
             greenBookCount += 1;
-            Debug.Log("Green Books:" + greenBookCount);
+            Debug.Log("Green Books: " + greenBookCount);
         }
     }
 }
