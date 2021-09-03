@@ -14,6 +14,7 @@ public class PassLock : MonoBehaviour
 
     public Transform openDoor;
     public GameObject textDisplay;
+    public AudioSource errorSound;
 
 
     private void Start()
@@ -21,6 +22,8 @@ public class PassLock : MonoBehaviour
         passLength = pass.Length;
     }
    
+
+    //Checks if the attemped code is the same as the set code. If true, door opens for 4 seconds
     void CheckPass()
     {
         if (attemptedPass == pass)
@@ -56,7 +59,7 @@ public class PassLock : MonoBehaviour
         if (passPlace == passLength)
         {
             CheckPass();
-
+            errorSound.Play();
             attemptedPass = "";
             passPlace = 0;
         }

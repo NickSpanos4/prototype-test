@@ -17,6 +17,7 @@ public class KeypadController : MonoBehaviour
         }
     }
 
+    //Uses rayvasting to check the objects being hit, in this case the numbered buttons.
     void CheckButtonHit()
     {
         RaycastHit hit;
