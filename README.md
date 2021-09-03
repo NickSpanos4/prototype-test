@@ -17,14 +17,24 @@ What I learned the most from this exercise is that I need to maintain my patienc
 
 # Instuctions for building the game:
 
-to 
+To create a build for the game, follow these instructions:
+
+File > Build Settings > Click 'Add Open Scenes' to the 'Scenes in Build' section > Choose what platform you are building for > For windows, choose target platform and the x86_64 Architechture option > Click Build and choose which file you want the build to be placed
 
 
 # Instuctions playing the game:
 
-to 
+Controls:
+
+WASD or Arrow Keys to move around the game
+Hold SHIFT to sprint
+SPACE to jump
+MOUSE to move the camera
+LEFT CLICK to interact with objects
 
 
 # Cheater's guide to the puzzle:
 
-**First Room:** to solve the first room's puzzle, the player must type in the cod 4-7-9, based off the colour coding of the books and
+**First Room:** to solve the first room's puzzle, the player must type in the cod 4-7-9, based off the colour coding of the books, how many of the books are there, and the placement of the colour blocks on the keypad.
+
+**Second Room:** to solve this puzzle, the mysterious quote is a misdirection, you have to realize that the colour coding of the prompt correlates to the amount you need to place in the bin to get the final door to open up!
